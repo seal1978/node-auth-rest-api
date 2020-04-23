@@ -7,7 +7,7 @@ var logger = require('morgan');
 const mongoose = require('mongoose');
 mongoose.Promise = global.Promise;
 const config = require('./config/config.json');
-mongoose.connect(`mongodb://${config.db_user}:${config.db_password}@ds153460.mlab.com:53460/database_auth_app`);
+mongoose.connect(`mongodb+srv://zhang:666888zhang@cluster0-mzn0j.azure.mongodb.net/test?retryWrites=true&w=majority`);
 const db = mongoose.connection;
 db.on('error', console.error.bind(console, 'connection error:'));
 db.once('open', function() {
