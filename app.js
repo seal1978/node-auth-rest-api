@@ -7,7 +7,7 @@ var logger = require('morgan');
 const mongoose = require('mongoose');
 mongoose.Promise = global.Promise;
 const config = require('./config/config.json');
-mongoose.connect(`mongodb+srv://zhang:666888zhang@cluster0-mzn0j.azure.mongodb.net/test?retryWrites=true&w=majority`);
+mongoose.connect(`mongodb+srv://zhang:666888zhang@cluster0-mzn0j.azure.mongodb.net/test?retryWrites=true&w=majority` {autoIndex: false});
 const db = mongoose.connection;
 db.on('error', console.error.bind(console, 'connection error:'));
 db.once('open', function() {
